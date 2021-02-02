@@ -65,7 +65,6 @@ class HomeFragment : Fragment() {
         try {
             ConnectBluetoothFragment.outputStream.write(command.toByteArray())
             Toast.makeText(requireContext(),"Door is Closed",Toast.LENGTH_LONG).show()
-
         }catch (e:IOException){
             e.printStackTrace()
             Log.e("ERROR", "door_close: ",e )
@@ -78,11 +77,12 @@ class HomeFragment : Fragment() {
                 val isCorrect = TextUtils.equals("012", getPatternString(ids))
                 if (isCorrect) {
                     val command = "1"
+                    switchCompat.isClickable = true
+                    Toast.makeText(requireContext(), "Door is Open", Toast.LENGTH_LONG).show();
+                    bottomSheetBehavior.state = BottomSheetBehavior.STATE_HIDDEN
                     try {
-                        ConnectBluetoothFragment.outputStream.write(command.toByteArray())
-                        switchCompat.isClickable = true
-                        Toast.makeText(requireContext(), "Door is Open", Toast.LENGTH_LONG).show();
-                        bottomSheetBehavior.state = BottomSheetBehavior.STATE_HIDDEN
+                        //ConnectBluetoothFragment.outputStream.write(command.toByteArray())
+
                     } catch (e: IOException) {
                         e.printStackTrace()
                         Log.e("ERROR", "onComplete: ",e )
