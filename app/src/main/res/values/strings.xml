@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">DoorLock</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="door_is_locked">Door Is Locked</string>
+    <string name="device_connected">Device Connected</string>
+    <string name="batterylife_and_date">BatteryLife and date</string>
+    <string name="searching_for_the_bluetooth_device">Searching for the Bluetooth Device</string>
+    <string name="searching_bluetooth_device">searching bluetooth device</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+</resources>

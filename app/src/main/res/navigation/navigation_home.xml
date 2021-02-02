@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_home"
+    app:startDestination="@id/connectBluetoothFragment">
+
+    <fragment
+        android:id="@+id/connectBluetoothFragment"
+        android:name="com.example.doorlock.Fragments.ConnectBluetoothFragment"
+        android:label="fragment_connect_bluetooth"
+        tools:layout="@layout/fragment_connect_bluetooth" >
+        <action
+            android:id="@+id/action_connectBluetoothFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.doorlock.Fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.doorlock.Fragments.SettingsFragment"
+        android:label="SettingsFragment" />
+</navigation>
