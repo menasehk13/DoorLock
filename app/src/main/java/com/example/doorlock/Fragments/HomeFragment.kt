@@ -12,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.widget.SwitchCompat
+import androidx.navigation.findNavController
 import com.example.doorlock.MainActivity
 import com.example.doorlock.R
 import com.google.android.material.bottomsheet.BottomSheetBehavior
@@ -44,6 +45,7 @@ class HomeFragment : Fragment() {
         switchCompat=view.findViewById(R.id.switch_door_lock)
         bottomshet=view.findViewById(R.id.bottom_sheet)
         patternLockView=view.findViewById(R.id.pattern_lock)
+        settingbutton=view.findViewById(R.id.setting)
         bottomSheetBehavior  = BottomSheetBehavior.from(bottomshet)
         bottomSheetBehavior.state=BottomSheetBehavior.STATE_HIDDEN
         bottomSheetBehavior.isDraggable=false
@@ -57,6 +59,9 @@ class HomeFragment : Fragment() {
             } else {
                 door_close()
             }
+        }
+        settingbutton.setOnClickListener {
+          it.findNavController().navigate(R.id.action_homeFragment_to_settingFragment)
         }
     }
 
